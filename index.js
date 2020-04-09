@@ -1,4 +1,11 @@
-const os = require('os');
+const fs = require('fs');
 
-console.log('memoria total: ', os.totalmem());
-console.log('memoria libre: ', os.freemem());
+fs.writeFile('./texto.txt', 'Linea Uno', function(err) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Archivo creado');
+    }
+});
+
+console.log('Ultima linea de codigo');
